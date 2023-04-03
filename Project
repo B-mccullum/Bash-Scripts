@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#Update all yum packages
+yum update -y
+
+#Install Apache Web Server
+yum install -y httpd
+
+#Start Then Enable Apache Web Server
+systemctl start httpd
+systemctl enable httpd
+
+#Adds our custom webpage html code to "index.html" file.
+echo "<h1>Congratulations Project One Complete!</h1>" > /var/www/html/index.html
